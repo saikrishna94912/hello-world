@@ -1,4 +1,4 @@
-FROM docker.apple.com/base-images/ubi8-minimal/java11-runtime:latest
+FROM openjdk:8-jdk-alpine
 USER 0
 RUN microdnf install shadow-utils
 RUN ["/usr/bin/sh", "-c", "useradd -u 101 -d /opt/qsuser qsuser"]
